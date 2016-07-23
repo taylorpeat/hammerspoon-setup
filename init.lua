@@ -1,3 +1,5 @@
+--General settings--
+
 hs.window.animationDuration = 0
 
 hs.dockicon.hide()
@@ -7,22 +9,6 @@ monitorScreen = "Acer B286HK"
 
 
 --Find out info--
-
--- hs.hotkey.bind({"cmd", "alt", "ctrl"}, "M", function()
---   hs.alert.show(hs.screen.allScreens()[1]:name())
--- end)
-
--- hs.hotkey.bind({"cmd", "alt", "ctrl"}, "N", function()
---   hs.alert.show(hs.screen.allScreens()[2]:name())
--- end)
-
-
-
--- hs.hotkey.bind({"cmd", "alt", "ctrl"}, "B", function()
---   hs.alert.show(googleChrome:allWindows()[1]:title())
--- end)
-
-
 
 hs.hotkey.bind({"cmd", "alt", "ctrl"}, "R", function()
   hs.reload()
@@ -37,6 +23,8 @@ hs.hotkey.bind({"cmd", "alt", "ctrl"}, "I", function()
   end
 end)
 
+
+--Resize focused window--
 
 hs.hotkey.bind({"cmd", "alt"}, "Left", function()
   local win = hs.window.frontmostWindow()
@@ -130,7 +118,7 @@ hs.hotkey.bind({"cmd", "alt", "ctrl"}, "F", function()
 end)
 
 
---Screen Layouts--
+--Screen layouts--
 
 local terminal = hs.application.find("terminal")
 local googleChrome = hs.application.find("google chrome")
@@ -175,10 +163,8 @@ local layout5 = {
   {"Spotify", nil, monitorScreen, right33bots, nil, nil},
 }
 
--- local layout6 = {
---   {"Sublime Text 2", nil, monitorScreen, left33, nil, nil},
--- }
 
+--Screen layout key bindings--
 
 hs.hotkey.bind({"cmd", "alt", "ctrl"}, "1", function()
   hs.application.launchOrFocus("Google Chrome")
@@ -213,17 +199,4 @@ hs.hotkey.bind({"cmd", "alt", "ctrl"}, "5", function()
   hs.application.launchOrFocus("Sublime Text 2")
   hs.layout.apply(layout5)
 end)
-
--- hs.hotkey.bind({"cmd", "alt", "ctrl"}, "6", function()
---   hs.application.launchOrFocus("Google Chrome")
---   hs.application.launchOrFocus("Sublime Text 2")
---   hs.application.launchOrFocus("Terminal")
---   hs.layout.apply(layout6)
---   hs.window.tiling.tileWindows(googleChrome:allWindows(), right67x, 0.01)
--- end)
-
--- hs.hotkey.bind({"cmd", "alt", "ctrl"}, "6", function()
---   hs.application.launchOrFocus("Google Chrome")
---   hs.window.tiling.tileWindows(googleChrome:allWindows(), fullScreen, 0.01)
--- end)
 
