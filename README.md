@@ -5,9 +5,9 @@ Basic configuration file with keyboard shortcuts for window resizing and set lay
 
 Keyboard shortcuts:
 
-       opt + cmd + left  = Left Half of Screen
-       opt + cmd + right = Right Half of Screen
-       
+opt + cmd + left  = Left Half of Screen
+opt + cmd + right = Right Half of Screen
+
 ctrl + opt + cmd + left  = Left Third of Screen
 ctrl + opt + cmd + right = Right Third of Screen
 ctrl + opt + cmd + down  = Middle Third of Screen
