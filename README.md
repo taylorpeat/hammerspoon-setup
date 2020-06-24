@@ -6,12 +6,9 @@ Basic configuration file with keyboard shortcuts for window resizing and set lay
 
 |Keyboard Shortcut| Window Placement     |
 :-----------------|:---------------------|
-opt + cmd + left  | Left Half of Screen  |
-opt + cmd + right | Right Half of Screen |
-ctrl + opt + cmd + left  | Left Third of Screen
-ctrl + opt + cmd + right | Right Third of Screen
-ctrl + opt + cmd + down  | Middle Third of Screen
-ctrl + opt + cmd + up    | Left Two-Thirds of Screen
-ctrl + opt + cmd + "F"     | Full Screen (Without covering top menu bar)
-ctrl + opt + cmd + "1"     | Custom layout for Google Chrome & Sublime Text 2
- | Multi-window layouts for numbers 2 through 5
+ctrl + cmd + left  | Shift Window to Left Side |
+ctrl + cmd + right | Shift Window to Right Side |
+ctrl + opt + cmd + down  | Left Third of Screen
+ctrl + opt + cmd + left  | Left Half of Screen
+ctrl + opt + cmd + up    | Left Two-Thirds of Screen 
+ctrl + opt + cmd + right | Full Screen (Without covering top menu bar)

@@ -47,20 +47,7 @@ hs.hotkey.bind({"cmd", "ctrl"}, "Right", function()
   win:setFrame(f)
 end)
 
-hs.hotkey.bind({"cmd", "alt"}, "Left", function()
-  local win = hs.window.frontmostWindow()
-  local f = win:frame()
-  local screen = win:screen()
-  local max = screen:frame()
-
-  f.x = max.x
-  f.y = max.y
-  f.w = max.w / 2
-  f.h = max.h
-  win:setFrame(f)
-end)
-
-hs.hotkey.bind({"cmd", "alt"}, "Right", function()
+hs.hotkey.bind({"cmd", "alt", "ctrl"}, "Right", function()
   local win = hs.window.frontmostWindow()
   local f = win:frame()
   local screen = win:screen()
@@ -73,20 +60,20 @@ hs.hotkey.bind({"cmd", "alt"}, "Right", function()
   win:setFrame(f)
 end)
 
-hs.hotkey.bind({"cmd", "alt", "ctrl"}, "Left", function()
-  local win = hs.window.frontmostWindow()
-  local f = win:frame()
-  local screen = win:screen()
-  local max = screen:frame()
+-- hs.hotkey.bind({"cmd", "alt"}, "Right", function()
+--   local win = hs.window.frontmostWindow()
+--   local f = win:frame()
+--   local screen = win:screen()
+--   local max = screen:frame()
 
-  f.x = max.x
-  f.y = max.y
-  f.w = max.w / 3
-  f.h = max.h
-  win:setFrame(f)
-end)
+--   f.x = max.x + (max.w / 2)
+--   f.y = max.y
+--   f.w = max.w / 2
+--   f.h = max.h
+--   win:setFrame(f)
+-- end)
 
-hs.hotkey.bind({"cmd", "alt", "ctrl"}, "Right", function()
+hs.hotkey.bind({"cmd", "alt", "ctrl"}, "Down", function()
   local win = hs.window.frontmostWindow()
   local f = win:frame()
   local screen = win:screen()
@@ -99,20 +86,20 @@ hs.hotkey.bind({"cmd", "alt", "ctrl"}, "Right", function()
   win:setFrame(f)
 end)
 
+-- hs.hotkey.bind({"cmd", "alt", "ctrl"}, "Right", function()
+--   local win = hs.window.frontmostWindow()
+--   local f = win:frame()
+--   local screen = win:screen()
+--   local max = screen:frame()
+
+--   f.x = max.x + (max.w / 3 * 2)
+--   f.y = max.y
+--   f.w = max.w / 3
+--   f.h = max.h
+--   win:setFrame(f)
+-- end)
+
 hs.hotkey.bind({"cmd", "alt", "ctrl"}, "Up", function()
-  local win = hs.window.frontmostWindow()
-  local f = win:frame()
-  local screen = win:screen()
-  local max = screen:frame()
-
-  f.x = max.x
-  f.y = max.y
-  f.w = max.w / 3 * 2
-  f.h = max.h
-  win:setFrame(f)
-end)
-
-hs.hotkey.bind({"cmd", "alt", "ctrl"}, "Down", function()
   local win = hs.window.frontmostWindow()
   local f = win:frame()
   local screen = win:screen()
@@ -120,12 +107,25 @@ hs.hotkey.bind({"cmd", "alt", "ctrl"}, "Down", function()
 
   f.x = max.x + (max.w / 3)
   f.y = max.y
-  f.w = max.w / 3
+  f.w = max.w / 3 * 2
   f.h = max.h
   win:setFrame(f)
 end)
 
-hs.hotkey.bind({"cmd", "alt", "ctrl"}, "F", function()
+-- hs.hotkey.bind({"cmd", "alt", "ctrl"}, "Down", function()
+--   local win = hs.window.frontmostWindow()
+--   local f = win:frame()
+--   local screen = win:screen()
+--   local max = screen:frame()
+
+--   f.x = max.x + (max.w / 3)
+--   f.y = max.y
+--   f.w = max.w / 3
+--   f.h = max.h
+--   win:setFrame(f)
+-- end)
+
+hs.hotkey.bind({"cmd", "alt", "ctrl"}, "Left", function()
   local win = hs.window.frontmostWindow()
   local f = win:frame()
   local screen = win:screen()
@@ -187,37 +187,36 @@ local layout5 = {
 
 --Screen layout key bindings--
 
-hs.hotkey.bind({"cmd", "alt", "ctrl"}, "1", function()
-  hs.application.launchOrFocus("Google Chrome")
-  hs.application.launchOrFocus("Sublime Text 2")
-  hs.layout.apply(layout1)
-end)
+-- hs.hotkey.bind({"cmd", "alt", "ctrl"}, "1", function()
+--   hs.application.launchOrFocus("Google Chrome")
+--   hs.application.launchOrFocus("Sublime Text 2")
+--   hs.layout.apply(layout1)
+-- end)
 
-hs.hotkey.bind({"cmd", "alt", "ctrl"}, "2", function()
-  hs.application.launchOrFocus("Google Chrome")
-  hs.application.launchOrFocus("Sublime Text 2")
-  hs.layout.apply(layout2)
-end)
+-- hs.hotkey.bind({"cmd", "alt", "ctrl"}, "2", function()
+--   hs.application.launchOrFocus("Google Chrome")
+--   hs.application.launchOrFocus("Sublime Text 2")
+--   hs.layout.apply(layout2)
+-- end)
 
-hs.hotkey.bind({"cmd", "alt", "ctrl"}, "3", function()
-  hs.application.launchOrFocus("Google Chrome")
-  hs.application.launchOrFocus("Terminal")
-  hs.application.launchOrFocus("Sublime Text 2")
-  hs.layout.apply(layout3)
-  hs.window.tiling.tileWindows(terminal:allWindows(), left67botx)
-end)
+-- hs.hotkey.bind({"cmd", "alt", "ctrl"}, "3", function()
+--   hs.application.launchOrFocus("Google Chrome")
+--   hs.application.launchOrFocus("Terminal")
+--   hs.application.launchOrFocus("Sublime Text 2")
+--   hs.layout.apply(layout3)
+--   hs.window.tiling.tileWindows(terminal:allWindows(), left67botx)
+-- end)
 
-hs.hotkey.bind({"cmd", "alt", "ctrl"}, "4", function()
-  hs.application.launchOrFocus("Google Chrome")
-  hs.application.launchOrFocus("Terminal")
-  hs.application.launchOrFocus("Sublime Text 2")
-  hs.layout.apply(layout4)
-end)
+-- hs.hotkey.bind({"cmd", "alt", "ctrl"}, "4", function()
+--   hs.application.launchOrFocus("Google Chrome")
+--   hs.application.launchOrFocus("Terminal")
+--   hs.application.launchOrFocus("Sublime Text 2")
+--   hs.layout.apply(layout4)
+-- end)
 
-hs.hotkey.bind({"cmd", "alt", "ctrl"}, "5", function()
-  hs.application.launchOrFocus("Google Chrome")
-  hs.application.launchOrFocus("Spotify")
-  hs.application.launchOrFocus("Sublime Text 2")
-  hs.layout.apply(layout5)
-end)
-
+-- hs.hotkey.bind({"cmd", "alt", "ctrl"}, "5", function()
+--   hs.application.launchOrFocus("Google Chrome")
+--   hs.application.launchOrFocus("Spotify")
+--   hs.application.launchOrFocus("Sublime Text 2")
+--   hs.layout.apply(layout5)
+-- end)
